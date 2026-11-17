@@ -14,3 +14,7 @@
 
 # raydium touch
 (/system)?/vendor/bin/rm_ts_server				u:object_r:raydium_exec:s0
+
+# Mount point of the RP3 calibration partition (init.cal.rc). Only the
+# directory itself, the files keep the labels stored on the partition.
+/usercalib					u:object_r:factory_file:s0
