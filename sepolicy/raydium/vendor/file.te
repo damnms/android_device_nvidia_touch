@@ -1,0 +1,2 @@
+# Touch and mpu calibration on the RP3 partition mounted on /usercalib
+type usercalib_file, file_type;

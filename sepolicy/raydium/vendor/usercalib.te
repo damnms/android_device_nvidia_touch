@@ -1,0 +1,7 @@
+allow init usercalib_file:dir mounton;
+allow vendor_init usercalib_file:dir create_dir_perms;
+
+allow raydium mnt_vendor_file:dir search;
+allow raydium usercalib_file:dir create_dir_perms;
+allow raydium usercalib_file:file create_file_perms;
+allow raydium vendor_data_file:lnk_file read;

@@ -13,6 +13,8 @@ on early-init
     export MPU_CONF_DIR /mnt/vendor/factory/mpu
 
 on post-fs-data
+    # RP3 has no xattr labels; label it before creating the calibration dirs
+    restorecon_recursive /usercalib
     rm /data/vendor/misc/touchscreen
     rm /data/vendor/misc/mpu
     mkdir /usercalib/touchscreen 0755 system system
