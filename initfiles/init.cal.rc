@@ -15,6 +15,8 @@ on early-init
 on post-fs-data
     # RP3 has no xattr labels; label it before creating the calibration dirs
     restorecon_recursive /usercalib
+    # Parent of the calibration links, nothing else creates it
+    mkdir /data/vendor/misc 0771 system system
     rm /data/vendor/misc/touchscreen
     rm /data/vendor/misc/mpu
     mkdir /usercalib/touchscreen 0755 system system
